@@ -9,11 +9,9 @@
     <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
     <!-- define a camera which will move according to the marker position -->
     <a-marker-camera preset='hiro'></a-marker-camera>
-    <a-assets>
-      <a-asset-item id="Tank" src="/ARtest/Tank.gltf"></a-asset-item>
-    </a-assets>
-    <!-- use your gltf model -->
-    <a-entity gltf-model="##Tank"></a-entity>
+    <a-entity
+      gltf-model=”url(/ARtest/Tank.gltf)”>
+    </a-entity>
     <a-text value="Hello, World!"></a-text>
     
   </a-scene>
