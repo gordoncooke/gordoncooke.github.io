@@ -3,20 +3,25 @@
 <!-- include ar.js for A-Frame -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
-<body style='margin : 0px; overflow: hidden;'>
-  <a-scene embedded arjs>
-    <!-- create your content here. just a box for now -->
-    <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
-    <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset='hiro'></a-marker-camera>
-    <a-entity
-      gltf-model=”url(/ARtest/Tank.gltf)”>
-    </a-entity>
-    <a-text value="Hello, World!"></a-text>
-    
+<body style=’margin : 0px; overflow: hidden;’>
+  <a-scene embedded arjs=’sourceType: webcam;’>
+      <a-marker preset=’hiro’>
+        <!-- Adding an OBJ file to an AR Project-->
+        <a-entity 
+            obj-model=”obj: url(/ARtest/Tank.obj); 
+            mtl: url(/ARtest/Tank.mtl)”>
+        </a-entity>
+        <a-text value="Hello, World!"></a-text>
+                  
+      </a-marker>
+  <a-entity camera>
+  </a-entity>
   </a-scene>
-</body>  
-  
+</body>
+
+
+
+
   
   
  <!-- 
