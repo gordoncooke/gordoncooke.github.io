@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.6.1/aframe.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-camera></a-camera>
+      <!--camera is at 0,1.6,0 looking down the -z axis. Pos x is to right -->
+      
+      <!-- Preload assets -->
+      <a-assets>
+              <a-asset-item
+        id="BMP2"
+        src="models/BMP-2_Green.dae"
+        response-type="arraybuffer"
+      ></a-asset-item>
+          </a-assets>
+      
+      <a-entity 
+          collada-model="#BMP2"
+          position="0 0 -20" 
+          rotation="0 90 0"
+          >
+      </a-entity>
+      
+      <a-light color="white" position="-1 1 0"></a-light>
+      <a-light type="ambient" color="#FFF" intensity="2"></a-light>
+      <a-sky color="black"></a-sky> 
+
+    </a-scene>
+  </body>
+</html>
